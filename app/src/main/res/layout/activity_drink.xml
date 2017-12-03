@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.scamero1.drinkdiary.DrinkActivity">
+
+    <ImageView
+        android:id="@+id/imageViewHeader"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="16dp"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="w,16:9"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVerticalRight"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVerticalLeft"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/scotchbottle" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineVerticalLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="8dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineVerticalRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="8dp" />
+
+    <ImageView
+        android:id="@+id/imageViewPoster"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        android:adjustViewBounds="false"
+        android:background="@null"
+        android:cropToPadding="false"
+        android:elevation="10dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewHeader"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toStartOf="@+id/imageViewHeader"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewHeader"
+        app:srcCompat="@drawable/scotchglass" />
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="The balvenie's 12 year single malt"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVerticalRight"
+        app:layout_constraintStart_toEndOf="@+id/imageViewPoster"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewHeader"
+        tools:text="The balvenie's 12 year single malt" />
+
+    <TextView
+        android:id="@+id/textViewPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"
+        android:text="69.99$"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVerticalRight"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPoster"
+        tools:text="69.99$" />
+
+    <TextView
+        android:id="@+id/textViewType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Scotch"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVerticalLeft"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPoster" />
+
+    <TextView
+        android:id="@+id/textViewBrand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"
+        android:text="The Balvenie"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintEnd_toStartOf="@+id/textViewPrice"
+        app:layout_constraintStart_toEndOf="@+id/textViewType"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPoster"
+        tools:text="The Balvenie" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrierContentImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="textViewType,textViewTitle,imageViewPoster,textViewPrice"
+        tools:layout_editor_absoluteY="267dp" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#c0c0c0"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVerticalRight"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVerticalLeft"
+        app:layout_constraintTop_toBottomOf="@+id/barrierContentImage" />
+
+    <TextView
+        android:id="@+id/textViewNotes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text='"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."'
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVerticalRight"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVerticalLeft"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        tools:text='"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."' />
+
+
+</android.support.constraint.ConstraintLayout>
